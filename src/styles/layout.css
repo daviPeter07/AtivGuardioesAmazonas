@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: var(--header-bg-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header__menu {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.header__theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__theme-button .icon {
+    stroke: var(--text-color);
+    transition: stroke 0.3s;
+}
+
+.header__theme-button:hover .icon {
+    stroke: var(--primary-color);
+}
+
+[data-theme='light'] .icon-sun {
+    display: none;
+}
+[data-theme='light'] .icon-moon {
+    display: block;
+}
+
+[data-theme='dark'] .icon-moon {
+    display: none;
+}
+[data-theme='dark'] .icon-sun {
+    display: block;
+}
+
+main {
+  padding-top: 80px;
+}
+
+section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section__title {
+  font-family: var(--font-family-serif);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+}
+.intro {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+.intro__text { flex: 1; }
+.intro__image { flex: 1; }
+.intro__image img { border-radius: 8px; }
+
+.highlights__card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+.gallery__grid img { border-radius: 8px; }
+
+
+.footer {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+  
+  .header__menu {
+    display: none; 
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+
+  .highlights__card-container {
+    grid-template-columns: 1fr;
+  }
+}

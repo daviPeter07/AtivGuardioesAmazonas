@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guardiões da Amazônia - Início</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav container">
+        <a href="index.html" class="header__logo">Guardiões da Amazônia</a>
+        <ul class="header__menu">
+          <li><a href="pages/biodiversidade.html">Biodiversidade</a></li>
+          <li><a href="pages/mapa.html">Mapa</a></li>
+          <li><a href="pages/quiz.html">Quiz</a></li>
+          <li><a href="pages/participe.html">Participe</a></li>
+        </ul>
+        <button id="theme-toggle" class="header__theme-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-moon"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-sun"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content container">
+          <h1 class="hero__title">Guardiões da Amazônia</h1>
+          <p class="hero__subtitle">
+            Explore, aprenda e ajude a proteger o coração do mundo.
+          </p>
+          <a href="pages/biodiversidade.html" class="button button--primary"
+            >Explore a Biodiversidade</a
+          >
+        </div>
+      </section>
+
+      <section class="intro container">
+        <div class="intro__text">
+          <h2 class="section__title">Nosso Propósito</h2>
+          <p>
+            O projeto "Guardiões da Amazônia" é uma plataforma educativa
+            dedicada a todos que desejam conhecer mais sobre a maior floresta
+            tropical do planeta. Nosso objetivo é informar e engajar estudantes,
+            professores e curiosos sobre a rica biodiversidade, a geografia
+            única e os desafios ecológicos que a Amazônia enfrenta.
+          </p>
+        </div>
+        <div class="intro__image">
+          <img
+            src="assets/vitoria-regia.jpg"
+            alt="Planta aquática Vitória-Régia flutuando na água."
+            width="100"
+            height="300"
+          />
+        </div>
+      </section>
+
+      <section class="highlights">
+        <div class="container">
+          <h2 class="section__title">O Que Oferecemos</h2>
+          <div class="highlights__card-container">
+            <a href="pages/biodiversidade.html" class="card">
+              <h3 class="card__title">Fauna e Flora</h3>
+              <p class="card__description">
+                Navegue por uma galeria de espécies que compõem o ecossistema
+                mais rico do planeta.
+              </p>
+            </a>
+            <a href="pages/mapa.html" class="card">
+              <h3 class="card__title">Mapa Interativo</h3>
+              <p class="card__description">
+                Explore os estados da Amazônia Legal e entenda a geografia da
+                região.
+              </p>
+            </a>
+            <a href="pages/quiz.html" class="card">
+              <h3 class="card__title">Teste seu Conhecimento</h3>
+              <p class="card__description">
+                Responda nosso quiz e descubra o quanto você sabe sobre a
+                Amazônia.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery container">
+        <h2 class="section__title">Um Olhar Sobre a Amazônia</h2>
+        <div class="gallery__grid">
+          <img
+            src="assets/onca-pintada.jpg"
+            alt="Onça-pintada repousando em um galho de árvore na floresta."
+            width="50"
+            height="150"
+          />
+          <img
+            src="assets/araras-vermelhas.jpg"
+            alt="Duas araras-vermelhas em um galho."
+            width="50"
+            height="150"
+          />
+          <img
+            src="assets/vista-amazonas.jpg"
+            alt="Vista aérea de um rio sinuoso cortando a vasta Floresta Amazônica."
+            width="50"
+            height="150"
+          />
+          <img
+            src="assets/casas-rio.png"
+            alt="Casas de palafita de uma comunidade ribeirinha à beira de um rio."
+            width="50"
+            height="150"
+          />
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <h2 class="cta__title">Sua curiosidade pode fazer a diferença.</h2>
+          <p class="cta__text">
+            Junte-se a nós nesta jornada de descoberta e conscientização.
+          </p>
+          <a href="pages/participe.html" class="button button--secondary"
+            >Participe do Projeto</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Davi Peterson. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="scripts/global.js"></script>
+  </body>
+</html>

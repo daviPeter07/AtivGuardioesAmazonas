@@ -1,0 +1,27 @@
+:root {
+  --bg-color: #f5f1e7;
+  --text-color: #1a1a1a;
+  --primary-color: #255938;
+  --accent-color: #3c8f4f;
+  --card-bg-color: #ffffff;
+  --header-bg-color: #f5f1e7f2;
+
+  --font-family-sans: 'Arial', 'Helvetica', sans-serif;
+  --font-family-serif: 'Georgia', serif;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  
+  --container-width: 1120px;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a201c;
+  --text-color: #e0e0e0;
+  --primary-color: #4caf50;
+  --accent-color: #81c784;
+  --card-bg-color: #2c352e;
+  --header-bg-color: #1a201cf2;
+}
