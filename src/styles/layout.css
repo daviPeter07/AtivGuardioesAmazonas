@@ -28,6 +28,13 @@
   gap: var(--spacing-lg);
 }
 
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md); /* Controla o espaço entre os botões */
+}
+
+/* toggle theme */
 .header__theme-button {
     background: none;
     border: none;
@@ -60,6 +67,42 @@
 }
 [data-theme='dark'] .icon-sun {
     display: block;
+}
+
+.header__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.mobile-menu a {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.mobile-menu a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Classe 'active' que o JavaScript vai adicionar para mostrar o menu */
+.mobile-menu.active {
+    display: flex;
 }
 
 main {
@@ -112,7 +155,12 @@ section {
   }
   
   .header__menu {
-    display: none; 
+    display: none;
+  }
+
+  .header__hamburger {
+    display: flex;
+    align-items: center;
   }
 
   .intro {
