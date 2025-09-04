@@ -1,24 +1,15 @@
-/* ======================================= */
-/* ====== LAYOUT GERAL E UTILIDADES ====== */
-/* ======================================= */
-
 .container {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
-
 .page-subtitle {
   text-align: center;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
-
-/* ======================================= */
-/* ====== COMPONENTES GLOBAIS (HEADER / FOOTER) ====== */
-/* ======================================= */
 
 .header {
   position: fixed;
@@ -30,25 +21,21 @@
   background-color: var(--header-bg-color);
   border-bottom: 1px solid var(--accent-color);
 }
-
 .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
 }
-
 .header__menu {
   display: flex;
   gap: var(--spacing-lg);
 }
-
 .header__actions {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
 }
-
 .header__theme-button {
   background: none;
   border: none;
@@ -59,7 +46,13 @@
   align-items: center;
   justify-content: center;
 }
-
+.header__theme-button .icon {
+  stroke: var(--text-color);
+  transition: stroke 0.3s;
+}
+.header__theme-button:hover .icon {
+  stroke: var(--primary-color);
+}
 [data-theme="light"] .icon-sun {
   display: none;
 }
@@ -78,8 +71,10 @@
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
 }
-
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -92,19 +87,16 @@
   border-bottom: 1px solid var(--accent-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .mobile-menu a {
   text-align: center;
   padding: var(--spacing-md) 0;
   width: 100%;
   font-size: 1.2rem;
 }
-
 .mobile-menu a:hover {
   background-color: var(--accent-color);
   color: #fff;
 }
-
 .mobile-menu.active {
   display: flex;
 }
@@ -114,7 +106,6 @@
   font-weight: bold;
   position: relative;
 }
-
 .header__menu a.active-link::after {
   content: "";
   position: absolute;
@@ -125,11 +116,45 @@
   height: 2px;
   background-color: var(--primary-color);
 }
-
 .mobile-menu a.active-link {
   background-color: var(--accent-color);
   color: #fff;
   font-weight: bold;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.header__hamburger .icon {
+  position: absolute;
+}
+.header__hamburger .icon-close {
+  display: none;
+}
+.header.mobile-menu-active .header__hamburger .icon-menu {
+  display: none;
+}
+.header.mobile-menu-active .header__hamburger .icon-close {
+  display: block;
+}
+
+[data-theme='dark'] .header__theme-button img,
+[data-theme='dark'] .header__hamburger img,
+[data-theme='dark'] .header__hamburger svg {
+  
+  filter: invert(1) grayscale(1) brightness(2);
 }
 
 .footer {
@@ -138,19 +163,13 @@
   border-top: 1px solid var(--accent-color);
 }
 
-/* ======================================= */
-/* ====== ESTILOS GERAIS DE CONTEÚDO ====== */
-/* ======================================= */
-
 main {
   padding-top: calc(80px + var(--spacing-lg));
   padding-bottom: var(--spacing-xl);
 }
-
 section {
   padding: var(--spacing-xl) 0;
 }
-
 .section__title {
   font-family: var(--font-family-serif);
   font-size: 2.5rem;
@@ -158,10 +177,6 @@ section {
   margin-bottom: var(--spacing-lg);
   color: var(--primary-color);
 }
-
-/* ======================================= */
-/* ====== PÁGINA: INDEX ====== */
-/* ======================================= */
 
 .intro {
   display: flex;
@@ -177,13 +192,11 @@ section {
 .intro__image img {
   border-radius: 8px;
 }
-
 .highlights__card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
 }
-
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -192,21 +205,15 @@ section {
 .gallery__grid img {
   border-radius: 8px;
 }
-
 .cta .button {
-  margin-top: var(--spacing-lg); /* Adiciona o respiro solicitado */
+  margin-top: var(--spacing-lg);
 }
-
-/* ======================================= */
-/* ====== PÁGINA: BIODIVERSIDADE ====== */
-/* ======================================= */
 
 .species-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
 }
-
 .species-card {
   background-color: var(--card-bg-color);
   border-radius: 8px;
@@ -215,19 +222,16 @@ section {
   padding: var(--spacing-lg);
   text-align: center;
 }
-
 .species-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-
 .species-card__title {
   color: var(--primary-color);
   font-family: var(--font-family-serif);
   font-size: 1.5rem;
   margin-bottom: var(--spacing-md);
 }
-
 .species-card__image {
   width: 100%;
   height: 180px;
@@ -235,16 +239,11 @@ section {
   border-radius: 6px;
   margin-bottom: var(--spacing-md);
 }
-
 .species-card__description {
   font-size: 0.9rem;
   line-height: 1.5;
   color: var(--text-color);
 }
-
-/* ======================================= */
-/* ====== PÁGINA: CONTATO (PARTICIPE) ====== */
-/* ======================================= */
 
 .contact-form {
   max-width: 600px;
@@ -253,18 +252,15 @@ section {
   flex-direction: column;
   gap: var(--spacing-lg);
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
 }
-
 .form-group label {
   margin-bottom: var(--spacing-sm);
   font-weight: bold;
   color: var(--primary-color);
 }
-
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -276,7 +272,6 @@ section {
   font-size: 1rem;
   font-family: var(--font-family-sans);
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -284,21 +279,15 @@ section {
   box-shadow: 0 0 0 3px
     color-mix(in srgb, var(--primary-color) 25%, transparent);
 }
-
 .contact-form .button {
   align-self: flex-start;
   padding: 12px 24px;
 }
-
 .form-message {
   margin-top: var(--spacing-md);
   font-weight: bold;
   text-align: center;
 }
-
-/* ======================================= */
-/* ====== PÁGINA: MAPA ====== */
-/* ======================================= */
 
 .map-section {
   display: flex;
@@ -306,51 +295,40 @@ section {
   gap: var(--spacing-lg);
   align-items: flex-start;
 }
-
 #map-container {
   height: 500px;
   flex: 2;
   border-radius: 8px;
   z-index: 1;
 }
-
 .state-list {
   flex: 1;
   background-color: var(--card-bg-color);
   padding: var(--spacing-lg);
   border-radius: 8px;
 }
-
 .state-list h2 {
   color: var(--primary-color);
   margin-top: 0;
   margin-bottom: var(--spacing-md);
   font-family: var(--font-family-serif);
 }
-
 .state-list ul {
   list-style: none;
   padding: 0;
 }
-
 .state-list li {
   padding: var(--spacing-sm) 0;
   border-bottom: 1px solid var(--accent-color);
 }
-
 .state-list li:last-child {
   border-bottom: none;
 }
-
-/* ======================================= */
-/* ====== PÁGINA: QUIZ ====== */
-/* ======================================= */
 
 .quiz-form {
   max-width: 700px;
   margin: 0 auto;
 }
-
 .question-block {
   background-color: var(--card-bg-color);
   padding: var(--spacing-lg);
@@ -358,19 +336,16 @@ section {
   margin-bottom: var(--spacing-lg);
   border-left: 5px solid var(--accent-color);
 }
-
 .question-text {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: var(--spacing-md);
 }
-
 .options-group {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
-
 .options-group label {
   display: block;
   padding: var(--spacing-md);
@@ -383,7 +358,6 @@ section {
   cursor: pointer;
   transition: background-color 0.2s;
 }
-
 .options-group label:hover {
   background-color: color-mix(
     in srgb,
@@ -391,11 +365,9 @@ section {
     var(--card-bg-color)
   );
 }
-
 .options-group input[type="radio"] {
   margin-right: 10px;
 }
-
 .quiz-result {
   display: none;
   margin-top: var(--spacing-lg);
@@ -408,10 +380,6 @@ section {
   border-radius: 8px;
 }
 
-/* ======================================= */
-/* ====== RESPONSIVIDADE ====== */
-/* ======================================= */
-
 @media (max-width: 992px) {
   .map-section {
     flex-direction: column;
@@ -422,25 +390,20 @@ section {
     flex: none;
   }
 }
-
 @media (max-width: 768px) {
   .section__title {
     font-size: 2rem;
   }
-
   .header__menu {
     display: none;
   }
-
   .header__hamburger {
     display: flex;
     align-items: center;
   }
-
   .intro {
     flex-direction: column;
   }
-
   .highlights__card-container {
     grid-template-columns: 1fr;
   }

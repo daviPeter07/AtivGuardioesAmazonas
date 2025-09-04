@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa Interativo - Guardiões da Amazônia</title>
-
     <link rel="stylesheet" href="../styles/main.css" />
 
     <link
@@ -15,22 +14,27 @@
     />
   </head>
   <body>
+    <div class="overlay" id="overlay"></div>
     <header class="header">
       <nav class="header__nav container">
-        <a href="../index.html" class="header__logo">
-          <img
-            src="../assets/icon-site-amazonia.jpg"
-            alt="Icon site amazonia"
-            width="90"
-            height="60"
-          />
-        </a>
+        <div>
+          <a href="../index.html" class="header__logo">
+            <img
+              src="../assets/icon-site-amazonia.jpg"
+              alt="Icon site amazonia"
+              width="90"
+              height="60"
+            />
+          </a>
+        </div>
+
         <ul class="header__menu">
-          <li><a href="biodiversidade.html">Biodiversidade</a></li>
-          <li><a href="mapa.html">Mapa</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="participe.html">Participe</a></li>
+          <li><a href="./biodiversidade.html">Biodiversidade</a></li>
+          <li><a href="./mapa.html">Mapa</a></li>
+          <li><a href="./quiz.html">Quiz</a></li>
+          <li><a href="./participe.html">Participe</a></li>
         </ul>
+
         <div class="header__actions">
           <button
             id="theme-toggle"
@@ -48,20 +52,52 @@
               class="icon icon-sun"
             />
           </button>
+
           <button
             id="hamburger-btn"
             class="header__hamburger"
             aria-label="Abrir menu"
           >
-            <img src="../assets/hamburguer.svg" alt="Hamburguer icon" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-close"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </button>
         </div>
       </nav>
+
       <div id="mobile-menu" class="mobile-menu">
-        <a href="biodiversidade.html">Biodiversidade</a>
-        <a href="mapa.html">Mapa</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="participe.html">Participe</a>
+        <a href="./biodiversidade.html">Biodiversidade</a>
+        <a href="./mapa.html">Mapa</a>
+        <a href="./quiz.html">Quiz</a>
+        <a href="./participe.html">Participe</a>
       </div>
     </header>
 
