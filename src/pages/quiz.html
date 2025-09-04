@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz da Biodiversidade - Guardiões da Amazônia</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav container">
+        <a href="../index.html" class="header__logo">
+          <img
+            src="../assets/icon-site-amazonia.jpg"
+            alt="Icon site amazonia"
+            width="90"
+            height="60"
+          />
+        </a>
+        <ul class="header__menu">
+          <li><a href="biodiversidade.html">Biodiversidade</a></li>
+          <li><a href="mapa.html">Mapa</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="participe.html">Participe</a></li>
+        </ul>
+        <div class="header__actions">
+          <button
+            id="theme-toggle"
+            class="header__theme-button"
+            aria-label="Mudar tema"
+          >
+            <img
+              src="../assets/moon.svg"
+              alt="Ícone de lua"
+              class="icon icon-moon"
+            />
+            <img
+              src="../assets/sun.svg"
+              alt="Ícone de sol"
+              class="icon icon-sun"
+            />
+          </button>
+          <button
+            id="hamburger-btn"
+            class="header__hamburger"
+            aria-label="Abrir menu"
+          >
+            <img src="../assets/hamburguer.svg" alt="Hamburguer icon" />
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="biodiversidade.html">Biodiversidade</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="participe.html">Participe</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <h1 class="section__title">Quiz da Biodiversidade</h1>
+        <p class="page-subtitle">
+          Teste seus conhecimentos sobre a incrível fauna e flora da Amazônia.
+          Selecione uma resposta para cada pergunta e veja sua pontuação no
+          final!
+        </p>
+
+        <form id="quiz-form" class="quiz-form">
+          <div class="question-block">
+            <p class="question-text">
+              1. Qual destes é o maior felino das Américas, encontrado na
+              Amazônia?
+            </p>
+            <div class="options-group">
+              <label
+                ><input type="radio" name="q1" value="a" /> Onça-Parda</label
+              >
+              <label
+                ><input type="radio" name="q1" value="b" /> Jaguatirica</label
+              >
+              <label
+                ><input type="radio" name="q1" value="c" /> Onça-Pintada</label
+              >
+            </div>
+          </div>
+
+          <div class="question-block">
+            <p class="question-text">
+              2. O Boto-Cor-de-Rosa, famoso no folclore amazônico, é um tipo de:
+            </p>
+            <div class="options-group">
+              <label
+                ><input type="radio" name="q2" value="a" /> Golfinho de água
+                doce</label
+              >
+              <label
+                ><input type="radio" name="q2" value="b" /> Peixe-boi</label
+              >
+              <label><input type="radio" name="q2" value="c" /> Foca</label>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <p class="question-text">
+              3. Qual destas é uma planta aquática icônica da Amazônia, com
+              folhas que podem passar de 2 metros de diâmetro?
+            </p>
+            <div class="options-group">
+              <label><input type="radio" name="q3" value="a" /> Aguapé</label>
+              <label
+                ><input type="radio" name="q3" value="b" /> Vitória-Régia</label
+              >
+              <label><input type="radio" name="q3" value="c" /> Orquídea</label>
+            </div>
+          </div>
+
+          <button type="submit" class="button button--primary">
+            Ver Resultado
+          </button>
+        </form>
+
+        <div id="quiz-result" class="quiz-result"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Davi Peterson. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../scripts/global.js"></script>
+    <script src="../scripts/quiz.js"></script>
+  </body>
+</html>

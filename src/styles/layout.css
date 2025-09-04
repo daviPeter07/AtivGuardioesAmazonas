@@ -1,9 +1,24 @@
+/* ======================================= */
+/* ====== LAYOUT GERAL E UTILIDADES ====== */
+/* ======================================= */
+
 .container {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
+
+.page-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ======================================= */
+/* ====== COMPONENTES GLOBAIS (HEADER / FOOTER) ====== */
+/* ======================================= */
 
 .header {
   position: fixed;
@@ -31,10 +46,9 @@
 .header__actions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md); /* Controla o espaço entre os botões */
+  gap: var(--spacing-md);
 }
 
-/* toggle theme */
 .header__theme-button {
   background: none;
   border: none;
@@ -46,22 +60,12 @@
   justify-content: center;
 }
 
-.header__theme-button .icon {
-  stroke: var(--text-color);
-  transition: stroke 0.3s;
-}
-
-.header__theme-button:hover .icon {
-  stroke: var(--primary-color);
-}
-
 [data-theme="light"] .icon-sun {
   display: none;
 }
 [data-theme="light"] .icon-moon {
   display: block;
 }
-
 [data-theme="dark"] .icon-moon {
   display: none;
 }
@@ -95,6 +99,7 @@
   width: 100%;
   font-size: 1.2rem;
 }
+
 .mobile-menu a:hover {
   background-color: var(--accent-color);
   color: #fff;
@@ -127,6 +132,16 @@
   font-weight: bold;
 }
 
+.footer {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--accent-color);
+}
+
+/* ======================================= */
+/* ====== ESTILOS GERAIS DE CONTEÚDO ====== */
+/* ======================================= */
+
 main {
   padding-top: calc(80px + var(--spacing-lg));
   padding-bottom: var(--spacing-xl);
@@ -143,6 +158,11 @@ section {
   margin-bottom: var(--spacing-lg);
   color: var(--primary-color);
 }
+
+/* ======================================= */
+/* ====== PÁGINA: INDEX ====== */
+/* ======================================= */
+
 .intro {
   display: flex;
   align-items: center;
@@ -173,11 +193,16 @@ section {
   border-radius: 8px;
 }
 
-/* Biodiversidade */
+.cta .button {
+  margin-top: var(--spacing-lg); /* Adiciona o respiro solicitado */
+}
+
+/* ======================================= */
+/* ====== PÁGINA: BIODIVERSIDADE ====== */
+/* ======================================= */
 
 .species-grid {
   display: grid;
-  /* Colunas responsivas: no mínimo 280px para cards menores */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
 }
@@ -217,12 +242,16 @@ section {
   color: var(--text-color);
 }
 
+/* ======================================= */
+/* ====== PÁGINA: CONTATO (PARTICIPE) ====== */
+/* ======================================= */
+
 .contact-form {
-  max-width: 600px; /* Define uma largura máxima para o formulário */
-  margin: 0 auto; /* Centraliza o formulário na página */
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg); /* Espaçamento entre os campos */
+  gap: var(--spacing-lg);
 }
 
 .form-group {
@@ -257,7 +286,7 @@ section {
 }
 
 .contact-form .button {
-  align-self: flex-start; /* Alinha o botão à esquerda */
+  align-self: flex-start;
   padding: 12px 24px;
 }
 
@@ -267,58 +296,26 @@ section {
   text-align: center;
 }
 
-.page-subtitle {
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer {
-  text-align: center;
-  padding: var(--spacing-lg) 0;
-  border-top: 1px solid var(--accent-color);
-}
-
-@media (max-width: 768px) {
-  .section__title {
-    font-size: 2rem;
-  }
-
-  .header__menu {
-    display: none;
-  }
-
-  .header__hamburger {
-    display: flex;
-    align-items: center;
-  }
-
-  .intro {
-    flex-direction: column;
-  }
-
-  .highlights__card-container {
-    grid-template-columns: 1fr;
-  }
-}
+/* ======================================= */
+/* ====== PÁGINA: MAPA ====== */
+/* ======================================= */
 
 .map-section {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas pequenas */
+  flex-wrap: wrap;
   gap: var(--spacing-lg);
   align-items: flex-start;
 }
 
 #map-container {
-  height: 500px; /* Altura é essencial para o mapa aparecer */
-  flex: 2; /* Faz o mapa ocupar 2/3 do espaço */
+  height: 500px;
+  flex: 2;
   border-radius: 8px;
-  z-index: 1; /* Garante que o mapa fique "embaixo" de outros elementos se necessário */
+  z-index: 1;
 }
 
 .state-list {
-  flex: 1; /* Faz a lista ocupar 1/3 do espaço */
+  flex: 1;
   background-color: var(--card-bg-color);
   padding: var(--spacing-lg);
   border-radius: 8px;
@@ -345,6 +342,76 @@ section {
   border-bottom: none;
 }
 
+/* ======================================= */
+/* ====== PÁGINA: QUIZ ====== */
+/* ======================================= */
+
+.quiz-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.question-block {
+  background-color: var(--card-bg-color);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-lg);
+  border-left: 5px solid var(--accent-color);
+}
+
+.question-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.options-group label {
+  display: block;
+  padding: var(--spacing-md);
+  background-color: color-mix(
+    in srgb,
+    var(--bg-color) 50%,
+    var(--card-bg-color)
+  );
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.options-group label:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--accent-color) 20%,
+    var(--card-bg-color)
+  );
+}
+
+.options-group input[type="radio"] {
+  margin-right: 10px;
+}
+
+.quiz-result {
+  display: none;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+}
+
+/* ======================================= */
+/* ====== RESPONSIVIDADE ====== */
+/* ======================================= */
+
 @media (max-width: 992px) {
   .map-section {
     flex-direction: column;
@@ -353,5 +420,28 @@ section {
   .state-list {
     width: 100%;
     flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+
+  .highlights__card-container {
+    grid-template-columns: 1fr;
   }
 }
