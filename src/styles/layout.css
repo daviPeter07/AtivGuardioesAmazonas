@@ -209,6 +209,55 @@ section {
     color: var(--text-color);
 }
 
+.contact-form {
+    max-width: 600px; /* Define uma largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg); /* Espaçamento entre os campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: var(--spacing-sm);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--font-family-sans);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 25%, transparent);
+}
+
+.contact-form .button {
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    padding: 12px 24px;
+}
+
+.form-message {
+    margin-top: var(--spacing-md);
+    font-weight: bold;
+    text-align: center;
+}
+
 .footer {
   text-align: center;
   padding: var(--spacing-lg) 0;
