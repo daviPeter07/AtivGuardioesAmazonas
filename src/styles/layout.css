@@ -29,79 +29,79 @@
 }
 
 .header__actions {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md); /* Controla o espaço entre os botões */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md); /* Controla o espaço entre os botões */
 }
 
 /* toggle theme */
 .header__theme-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__theme-button .icon {
-    stroke: var(--text-color);
-    transition: stroke 0.3s;
+  stroke: var(--text-color);
+  transition: stroke 0.3s;
 }
 
 .header__theme-button:hover .icon {
-    stroke: var(--primary-color);
+  stroke: var(--primary-color);
 }
 
-[data-theme='light'] .icon-sun {
-    display: none;
+[data-theme="light"] .icon-sun {
+  display: none;
 }
-[data-theme='light'] .icon-moon {
-    display: block;
+[data-theme="light"] .icon-moon {
+  display: block;
 }
 
-[data-theme='dark'] .icon-moon {
-    display: none;
+[data-theme="dark"] .icon-moon {
+  display: none;
 }
-[data-theme='dark'] .icon-sun {
-    display: block;
+[data-theme="dark"] .icon-sun {
+  display: block;
 }
 
 .header__hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .mobile-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--bg-color);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--accent-color);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu a {
-    text-align: center;
-    padding: var(--spacing-md) 0;
-    width: 100%;
-    font-size: 1.2rem;
+  text-align: center;
+  padding: var(--spacing-md) 0;
+  width: 100%;
+  font-size: 1.2rem;
 }
 .mobile-menu a:hover {
-    background-color: var(--accent-color);
-    color: #fff;
+  background-color: var(--accent-color);
+  color: #fff;
 }
 
 .mobile-menu.active {
-    display: flex;
+  display: flex;
 }
 
 .header__menu a.active-link {
@@ -111,7 +111,7 @@
 }
 
 .header__menu a.active-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -128,7 +128,7 @@
 }
 
 main {
-  padding-top: calc(80px + var(--spacing-lg)); 
+  padding-top: calc(80px + var(--spacing-lg));
   padding-bottom: var(--spacing-xl);
 }
 
@@ -144,118 +144,134 @@ section {
   color: var(--primary-color);
 }
 .intro {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
-.intro__text { flex: 1; }
-.intro__image { flex: 1; }
-.intro__image img { border-radius: 8px; }
+.intro__text {
+  flex: 1;
+}
+.intro__image {
+  flex: 1;
+}
+.intro__image img {
+  border-radius: 8px;
+}
 
 .highlights__card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
 }
 
 .gallery__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
 }
-.gallery__grid img { border-radius: 8px; }
+.gallery__grid img {
+  border-radius: 8px;
+}
 
 /* Biodiversidade */
 
 .species-grid {
-    display: grid;
-    /* Colunas responsivas: no mínimo 280px para cards menores */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
+  display: grid;
+  /* Colunas responsivas: no mínimo 280px para cards menores */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .species-card {
-    background-color: var(--card-bg-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: var(--spacing-lg);
-    text-align: center;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: var(--spacing-lg);
+  text-align: center;
 }
 
 .species-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .species-card__title {
-    color: var(--primary-color);
-    font-family: var(--font-family-serif);
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+  font-family: var(--font-family-serif);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .species-card__image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: var(--spacing-md);
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: var(--spacing-md);
 }
 
 .species-card__description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-color);
 }
 
 .contact-form {
-    max-width: 600px; /* Define uma largura máxima para o formulário */
-    margin: 0 auto; /* Centraliza o formulário na página */
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg); /* Espaçamento entre os campos */
+  max-width: 600px; /* Define uma largura máxima para o formulário */
+  margin: 0 auto; /* Centraliza o formulário na página */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg); /* Espaçamento entre os campos */
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    margin-bottom: var(--spacing-sm);
-    font-weight: bold;
-    color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: var(--spacing-md);
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    background-color: var(--card-bg-color);
-    color: var(--text-color);
-    font-size: 1rem;
-    font-family: var(--font-family-sans);
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: var(--font-family-sans);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 25%, transparent);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--primary-color) 25%, transparent);
 }
 
 .contact-form .button {
-    align-self: flex-start; /* Alinha o botão à esquerda */
-    padding: 12px 24px;
+  align-self: flex-start; /* Alinha o botão à esquerda */
+  padding: 12px 24px;
 }
 
 .form-message {
-    margin-top: var(--spacing-md);
-    font-weight: bold;
-    text-align: center;
+  margin-top: var(--spacing-md);
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
@@ -268,7 +284,7 @@ section {
   .section__title {
     font-size: 2rem;
   }
-  
+
   .header__menu {
     display: none;
   }
@@ -284,5 +300,58 @@ section {
 
   .highlights__card-container {
     grid-template-columns: 1fr;
+  }
+}
+
+.map-section {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas pequenas */
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+#map-container {
+  height: 500px; /* Altura é essencial para o mapa aparecer */
+  flex: 2; /* Faz o mapa ocupar 2/3 do espaço */
+  border-radius: 8px;
+  z-index: 1; /* Garante que o mapa fique "embaixo" de outros elementos se necessário */
+}
+
+.state-list {
+  flex: 1; /* Faz a lista ocupar 1/3 do espaço */
+  background-color: var(--card-bg-color);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+}
+
+.state-list h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-family-serif);
+}
+
+.state-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.state-list li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.state-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 992px) {
+  .map-section {
+    flex-direction: column;
+  }
+  #map-container,
+  .state-list {
+    width: 100%;
+    flex: none;
   }
 }

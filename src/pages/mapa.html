@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Participe - Guardiões da Amazônia</title>
+    <title>Mapa Interativo - Guardiões da Amazônia</title>
 
     <link rel="stylesheet" href="../styles/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
   </head>
   <body>
     <header class="header">
@@ -60,52 +67,31 @@
 
     <main>
       <section class="container">
-        <h1 class="section__title">Faça Parte do Projeto</h1>
+        <h1 class="section__title">Mapa Interativo da Amazônia</h1>
         <p class="page-subtitle">
-          Sua voz é importante para a conscientização. Envie suas dúvidas,
-          sugestões ou uma mensagem de apoio.
+          Explore a vasta extensão da Amazônia Legal, que abrange nove estados
+          brasileiros. Navegue pelo mapa para ter uma dimensão real da maior
+          floresta tropical do mundo.
         </p>
+      </section>
 
-        <form id="contact-form" class="contact-form">
-          <div class="form-group">
-            <label for="name">Nome Completo</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Seu nome aqui..."
-            />
-          </div>
+      <section class="container map-section">
+        <div id="map-container"></div>
 
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="seu.email@exemplo.com"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Sua Mensagem</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              required
-              placeholder="Deixe sua mensagem..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="button button--primary">
-            Enviar Mensagem
-          </button>
-
-          <p id="form-message" class="form-message"></p>
-        </form>
+        <aside class="state-list">
+          <h2>Estados da Amazônia Legal</h2>
+          <ul>
+            <li>Acre (AC)</li>
+            <li>Amapá (AP)</li>
+            <li>Amazonas (AM)</li>
+            <li>Mato Grosso (MT)</li>
+            <li>Pará (PA)</li>
+            <li>Rondônia (RO)</li>
+            <li>Roraima (RR)</li>
+            <li>Tocantins (TO)</li>
+            <li>Maranhão (MA) - parte</li>
+          </ul>
+        </aside>
       </section>
     </main>
 
@@ -115,7 +101,13 @@
       </div>
     </footer>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
     <script src="../scripts/global.js"></script>
-    <script src="../scripts/participe.js"></script>
+    <script src="../scripts/map.js"></script>
   </body>
 </html>
