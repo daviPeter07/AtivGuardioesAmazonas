@@ -100,13 +100,36 @@
     color: #fff;
 }
 
-/* Classe 'active' que o JavaScript vai adicionar para mostrar o menu */
 .mobile-menu.active {
     display: flex;
 }
 
+.header__menu a.active-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.header__menu a.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.mobile-menu a.active-link {
+  background-color: var(--accent-color);
+  color: #fff;
+  font-weight: bold;
+}
+
 main {
-  padding-top: 80px;
+  padding-top: calc(80px + var(--spacing-lg)); 
+  padding-bottom: var(--spacing-xl);
 }
 
 section {
@@ -142,6 +165,49 @@ section {
 }
 .gallery__grid img { border-radius: 8px; }
 
+/* Biodiversidade */
+
+.species-grid {
+    display: grid;
+    /* Colunas responsivas: no mínimo 280px para cards menores */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.species-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.species-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.species-card__title {
+    color: var(--primary-color);
+    font-family: var(--font-family-serif);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.species-card__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: var(--spacing-md);
+}
+
+.species-card__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
 
 .footer {
   text-align: center;
